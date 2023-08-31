@@ -1,0 +1,52 @@
+PROJECT_NAME: ''
+DATA:
+  POSITIVES_RADIUS: 8.0
+  NEGATIVES_RADIUS: 16.0
+MODEL:
+  NAME: "SphereVLAD"
+  TYPE: "LiSPH"
+  S2CNN:
+    INPUT_CHANNEL_NUM: 1
+  NETVLAD:
+    CLUSTER_NUM: 32
+    FEATURE_DIM: 16
+    NORMALIZE_INPUT: True
+    OUTPUT_DIM: None
+    GATE: False
+
+LOSS:
+  NAME: "LazyQuadrupletLoss"
+  MARGIN0: 0.5
+  MARGIN1: 0.2
+
+TRAINING:
+  NUM_WORKERS: 8
+  BATCH:
+    BATCH_SIZE: 6
+    FRAME_TRANSFORM: 0
+    BATCH_TRANSFORM: False
+  # Select GPUs
+  GPU:
+    IDS: [0,1]
+  # Optimizer
+  OPTIMIZER:
+    NAME: "Adam"
+    INIT_LEARNING_RATE: 1e-4
+  # Scheduler
+  SCHEDULER:
+    NAME: "MultiStepLR"
+    MILESTONES: [10]
+    GAMMA: 0.1
+  # Epoch
+  EPOCH: 20
+  # Resume?
+  RESUME: False
+
+# Save & Load weight
+WEIGHT:
+  LOAD_ADDRESS: None
+  SAVE_ADDRESS: None
+
+# where logs and weights will be saved at
+OUTPUT:
+  DIR: "data/results"
