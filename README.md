@@ -42,6 +42,7 @@ pip3 install cupy-cuda11x==11.6.0
 pip3 install pynvrtc joblib
 mkdir third && cd third
 git clone https://github.com/jonkhler/s2cnn.git
+cd s2cnn
 python setup.py install
 
 # install all others packages
