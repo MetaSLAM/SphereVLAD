@@ -1,9 +1,17 @@
 # SphereVLAD Series: Viewpoint-invariant Place Recognition
-Pytorch implementation **SphereVLAD** and **SphereVLAD++** proposed in the papers: </br> 
+**1. Pytorch implementation **SphereVLAD** and **SphereVLAD++** proposed in the papers:** </br> 
 [SeqSphereVLAD: Sequence Matching Enhanced Orientation-invariant Place Recognition](https://www.ri.cmu.edu/app/uploads/2020/11/0583.pdf) </br>
 Peng Yin, Fuying Wang, Anton Egorov, Jiafan Hou, Ji Zhang, Howie Choset </br>
 [SphereVLAD++: Attention-based and Signal-enhanced Viewpoint Invariant Descriptor](https://arxiv.org/abs/2207.02958) </br>
 Shiqi Zhao, Peng Yin*, Ge Yi, Sebastian Scherer
+
+**2. Core library for our iSimLoc, AutoMerge and BioSLAM works:** </br>
+[iSimLoc: Visual Global Localization for Previously Unseen Environments With Simulated Images](https://ieeexplore.ieee.org/document/10035430) </br>
+Peng Yin; Ivan Cisneros; Shiqi Zhao; Ji Zhang; Howie Choset; Sebastian Scherer </br>
+[AutoMerge: A Framework for Map Assembling and Smoothing in City-Scale Environments](https://ieeexplore.ieee.org/document/10203034) </br>
+Peng Yin; Shiqi Zhao; Haowen Lai; Ruohai Ge; Ji Zhang; Howie Choset; Sebastian Scherer </br>
+[BioSLAM: A Bioinspired Lifelong Memory System for General Place Recognition](https://ieeexplore.ieee.org/document/10242249) </br>
+Peng Yin; Abulikemu Abuduweili; Shiqi Zhao; Lingyun Xu; Changliu Liu; Sebastian Scherer
 
 ### Network Structure
 ![](pics/spherevlad.png)
@@ -150,4 +158,38 @@ python eval/evaluate_pitt.py --model-path=data/results/SphereVLAD2 --epoch=666 -
   journal={arXiv preprint arXiv:2205.10737},
   year={2022}
 }
+```
+```
+@ARTICLE{10035430,
+  author={Yin, Peng and Cisneros, Ivan and Zhao, Shiqi and Zhang, Ji and Choset, Howie and Scherer, Sebastian},
+  journal={IEEE Transactions on Robotics}, 
+  title={iSimLoc: Visual Global Localization for Previously Unseen Environments With Simulated Images}, 
+  year={2023},
+  volume={39},
+  number={3},
+  pages={1893-1909},
+  doi={10.1109/TRO.2023.3238201}}
+
+```
+```
+@ARTICLE{10203034,
+  author={Yin, Peng and Zhao, Shiqi and Lai, Haowen and Ge, Ruohai and Zhang, Ji and Choset, Howie and Scherer, Sebastian},
+  journal={IEEE Transactions on Robotics}, 
+  title={AutoMerge: A Framework for Map Assembling and Smoothing in City-Scale Environments}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-19},
+  doi={10.1109/TRO.2023.3290448}}
+```
+```
+@ARTICLE{10242249,
+  author={Yin, Peng and Abuduweili, Abulikemu and Zhao, Shiqi and Xu, Lingyun and Liu, Changliu and Scherer, Sebastian},
+  journal={IEEE Transactions on Robotics}, 
+  title={BioSLAM: A Bioinspired Lifelong Memory System for General Place Recognition}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-20},
+  doi={10.1109/TRO.2023.3306615}}
 ```
